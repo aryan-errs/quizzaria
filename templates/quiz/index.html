@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  /* Hero Section Styles */
+  .jumbotron {
+    margin-bottom: 0;
+    padding: 8rem 1rem;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    height:100vh;
+  }
+
+  /* Animated background effect */
+  .jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="none" stroke="rgba(255,255,255,0.1)" /></svg>');
+    opacity: 0.3;
+    animation: backgroundMove 20s linear infinite;
+  }
+
+  @keyframes backgroundMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+  }
+
+  /* Typography */
+  .display-1 {
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    animation: slideDown 1s ease-out;
+  }
+
+  .display-4 {
+    font-weight: 300;
+    margin-bottom: 2rem;
+    animation: slideDown 1s ease-out 0.2s backwards;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    animation: slideDown 1s ease-out 0.4s backwards;
+  }
+
+  /* Button Styles */
+  .btn-info {
+    background: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideUp 1s ease-out 0.6s backwards;
+  }
+
+  .btn-info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-info:active {
+    transform: translateY(-1px);
+  }
+
+  .fa-user-plus {
+    margin-right: 8px;
+  }
+
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .jumbotron {
+      padding: 6rem 1rem;
+    }
+
+    .display-1 {
+      font-size: 3.5rem;
+    }
+
+    .display-4 {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+
+<body>
+  {% include "quiz/navbar.html" %}
+  
+  <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+      <h1 class="display-1">Let's Quiz</h1>
+      <p class="display-4 d-none d-sm-block">Test your skills and become a master.</p>
+      <p class="lead">We organize quizzes on various topics.</p>
+      <p class="lead">Sign up if you haven't already and get access to millions of quizzes on the topic of your interest.</p>
+      <p class="lead"><strong>Start Your Journey Here:</strong></p>
+      <a href="/student/studentsignup" class="btn btn-lg btn-info">
+        <i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
+      </a>
+    </div>  
+  </section>
+</body>
+</html>

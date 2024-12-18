@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Teacher - Online Quiz</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    /* Styling for Jumbotron */
+    .jumbotron {
+      text-align: center;
+      border-radius: 15px; /* Rounded corners */
+      height:100vh;
+    }
+
+    .jumbotron h1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #343a40; /* Dark text color */
+    }
+
+    .jumbotron p.lead {
+      font-size: 1.25rem;
+      color: #6c757d; /* Muted text */
+    }
+
+    .jumbotron hr {
+      border: 1px solid #dee2e6;
+    }
+
+    /* Buttons Styling */
+    .jumbotron .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .jumbotron .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+
+    /* Responsive Padding */
+    body {
+      padding-top: 80px; /* Adjust spacing for navbar if fixed */
+    }
+
+    /* Footer Spacing */
+    .jumbotron {
+      margin-bottom: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Include Navbar -->
+  {% include "quiz/navbar.html" %}
+  
+  <!-- Jumbotron Section -->
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, Teacher</h1>
+    <p class="lead">Welcome to Online Quiz</p>
+    <hr class="my-4">
+    <p>You can access various features after Login.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="teachersignup" role="button">Create Your Account</a>
+      <a class="btn btn-primary btn-lg" href="teacherlogin" role="button">Login</a>
+    </p>
+  </div>
+</body>
+
+</html>
