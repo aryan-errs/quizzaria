@@ -1,9 +1,16 @@
 # Quizzaria
 ## Functions
 ### Admin
+
+- Create a virtual environment outside the project directory
+```
+cd /path/to/project
+python3 -m venv myvenv
+```
+
 - Create Admin account using command
 ```
-py manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 - After Login, can see Total Number Of Student, Teacher, Course, Questions are there in system on Dashboard.
 - Can View, Update, Delete, Approve Teacher.
@@ -33,14 +40,14 @@ py manage.py createsuperuser
 - Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
 - Open Terminal and Execute Following Commands :
 ```
-python -m pip install -r requirements. txt
+pip install -r requirements.txt
 ```
 - Download This Project Zip Folder and Extract it
 - Move to project folder in Terminal. Then run following Commands :
 ```
-py manage.py makemigrations
-py manage.py migrate
-py manage.py runserver
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
 ```
 - Now enter following URL in Your Browser Installed On Your Pc
 ```
